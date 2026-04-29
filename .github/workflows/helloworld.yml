@@ -13,3 +13,6 @@ jobs:
     steps:
       - name: "hello world step"
         run: echo "hello world"
+
+      - name: "print date step"
+        run: date
