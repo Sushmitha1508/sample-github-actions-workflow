@@ -1,0 +1,1 @@
+welcome to simple github actions workflow
