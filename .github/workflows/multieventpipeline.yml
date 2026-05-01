@@ -4,6 +4,8 @@ on:
         branches:
             - main
             - test
+    schedule:
+            - cron: '15 11 * * 2,5' # runs every day at midnight    
     pull_request:
         branches:
             - main
@@ -37,4 +39,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: "on workflow dispatch event"
-              run: echo "this is on workflow dispatch event"                
+              run: echo "this is on workflow dispatch event"               
+    on-schedule-job:
+        if: github.event_name == 'schedule'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "on schedule event"
+              run: echo "this is on schedule event"
