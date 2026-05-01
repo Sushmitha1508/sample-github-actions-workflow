@@ -7,7 +7,8 @@ on:
     pull_request:
         branches:
             - main
-            - test       
+            - test 
+    workflow_dispatch: # this will allow us to trigger the workflow manually from the github actions tab in the repository             
 
 jobs:
     on-push-job:
