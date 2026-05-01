@@ -4,7 +4,7 @@ on:
         branches:
             - main
             - test
-     pull_request:
+    pull_request:
         branches:
             - main
             - test       
@@ -16,10 +16,7 @@ jobs:
         steps:
             - name: "on push event"
               run: echo "this is on push event"
-   
-   
-   
-   on-pull-request-job:
+    on-pull-request-job:
         if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
         steps:
